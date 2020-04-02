@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/*===============================
+
+    foundation/
+    * reset............`html5doctor.com Reset Stylesheet`をベースとしたリセットCSS
+    * variables........プロジェクト全体を通して使用される変数
+
+================================*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*===============================
+    以下カスタマイズ
+================================*/
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/*===============================
+    余白設定
+================================*/
+/*===============================
+    フォントの大きさ設定
+================================*/
+/*===============================
+    フォントの太さ設定
+================================*/
+/*===============================
+    Color設定
+
+    役割を持つ色と、そうでない色の混在を避けるため、以下のように分類する。
+    ・$color-base-色等-差分: () ……… 不確定要素に使用される、ベースとなる色
+    ・$color-役割-色等-差分: () ………… テキスト、背景色など役割を持つ色
+
+================================*/
+/* リンクカラー ================================*/
+/* border ================================*/
+/* Background ================================*/
+/* Text ================================*/
+/*===============================
+ブレークポイント, デフォルトの横幅の指定
+================================*/
+/*===============================
+    ネストした値を取得
+    $getMapDeep_map      {String} : 配列
+    $getMapDeep_keys...  {String} : 取得したい値のkey名
+================================*/
+/*===============================
+ブレークポイント切替
+$responsive_breakpoint {String} : ブレークポイントが入る（pcまたはsp）
+================================*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.headerTop {
+  background-color: #f5f5f5;
+}
+
+.headerTop__container {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.headerTop__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.headerTop__left img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.headerTop__leftText--default {
+  font-size: 0.8rem;
+  line-height: 18px;
+}
+
+.headerTop__leftText--grey {
+  font-size: 0.6rem;
+  color: #666;
+  line-height: 12px;
+}
+
+.headerTop__right {
+  font-size: 0.8rem;
+  padding: 8px;
+  background-color: #eb6a7a;
+  border: 1px solid #eb6a7a;
+  border-radius: 2px;
+  color: #fff;
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__container img {
+  width: 70px;
+  height: 20px;
+}
+
+.header__container i {
+  color: #666;
+}
+
+.topic {
+  position: relative;
+}
+
+.topic img {
+  width: 100%;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topic h2 {
+  margin: 0 10px;
+  position: absolute;
+  top: 150px;
+  left: 0;
+  line-height: 22px;
+  font-size: 1rem;
+  color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.main__category, .accessRanking__category {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main__category a, .accessRanking__category a {
+  width: 50%;
+  display: block;
+}
+
+.main__category a h2, .accessRanking__category a h2 {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+}
+
+.main__category--normal, .accessRanking__category--normal {
+  border-bottom: 1px solid #e7e7e7;
+  color: #666;
+  font-weight: 400;
+}
+
+.main__category--isActive, .accessRanking__category--isActive {
+  border-bottom: solid 2px #eb6a7a;
+  color: #eb6a7a;
+}
+
+.main__contents li, .accessRanking__contents li {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.main__contents li > a, .accessRanking__contents li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+.main__contents--left img, .accessRanking__contents--left img {
+  height: 70px;
+  width: 70px;
+  margin-right: 10px;
+  border-radius: 2px;
+  background-size: cover;
+}
+
+.main__contents--rightPr, .accessRanking__contents--rightPr {
+  width: 15px;
+}
+
+.main__contents--right p, .accessRanking__contents--right p {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: #000;
+  line-height: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.main__contents--rightIntro, .accessRanking__contents--rightIntro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.6rem;
+  line-height: 13px;
+  color: #999;
+}
+
+.main__contents--rightIntro li, .accessRanking__contents--rightIntro li {
+  border-bottom: none;
+}
+
+.main__contents--rightIntro__viewText, .accessRanking__contents--rightIntro__viewText {
+  padding-right: 5px;
+  font-size: 0.8rem;
+}
+
+.main__contents--rightIntro__badge, .accessRanking__contents--rightIntro__badge {
+  width: 13px;
+}
+
+.main__paginate, .accessRanking__paginate {
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+}
+
+.main__paginate li, .accessRanking__paginate li {
+  text-align: center;
+}
+
+.main__paginate span, .accessRanking__paginate span {
+  line-height: 60px;
+  color: #999;
+}
+
+.main__paginate--center, .accessRanking__paginate--center {
+  width: 50%;
+}
+
+.main__paginate--center span, .accessRanking__paginate--center span {
+  font-size: 0.8rem;
+}
+
+.main__paginate--left, .main__paginate--right, .accessRanking__paginate--left, .accessRanking__paginate--right {
+  width: 25%;
+}
+
+.main__paginate--left a, .main__paginate--right a, .accessRanking__paginate--left a, .accessRanking__paginate--right a {
+  display: block;
+}
+
+.main__title, .accessRanking__title {
+  font-size: 1rem;
+  padding: 20px 15px 20px 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.sns {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+}
+
+.snsContainer {
+  background-color: #fff;
+  padding-bottom: 25px;
+}
+
+.snsContainer img {
+  width: 100%;
+}
+
+.snsContainer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 5px;
+}
+
+.snsContainer ul a {
+  display: block;
+}
+
+.snsContainer__tool {
+  font-size: 1.6rem;
+}
+
+.snsContainer__tool--facebook {
+  background-color: #4267b2;
+  padding: 10px 16px;
+  color: #fff;
+  border-radius: 22px;
+}
+
+.snsContainer__tool--twitter {
+  background-color: #1b95e0;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 22px;
+}
+
+.snsContainer__tool--line {
+  background-color: #00c300;
+  padding: 10px 12px;
+  color: #fff;
+  border-radius: 22px;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  padding-bottom: 80px;
+}
+
+.footerAppDownload__img {
+  width: 100%;
+}
+
+.footerContainer {
+  padding: 30px 20px 0;
+}
+
+.footerContainer__top {
+  background-color: #fff;
+  text-align: center;
+  display: block;
+  padding: 10px 0;
+  color: #666;
+  font-size: 0.8rem;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.footerContainer__top .material-icons {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.footerContainer ul {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 0;
+}
+
+.footerContainer ul > li {
+  font-size: 0.8rem;
+  display: inline-block;
+  border-right: 1px solid #ddd;
+  margin: 5px 0;
+}
+
+.footerContainer ul > li > a {
+  color: #999;
+  padding: 5px;
+}
+
+.footerContainer__thumb-mery {
+  text-align: center;
+}
+
+.footerContainer__thumb-mery img {
+  width: 100px;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.footerContainer p {
+  margin-top: 30px;
+  text-align: center;
+  color: #666;
+  font-size: 0.6rem;
+}
+/*# sourceMappingURL=top_mobile.css.map */

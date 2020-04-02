@@ -1,0 +1,575 @@
+@charset "utf-8";
+
+@import '../common';
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $color-link-krylon-classic-gray;
+}
+
+a:hover {
+    text-decoration: underline;
+    opacity: .8;
+}
+
+// header start
+.header {
+    border-bottom: 1px solid $color-border-pale-gray;
+    padding-top: $margin-px-20;
+    height: 50px;
+
+    &Container {
+        margin: 0 auto;
+        width: getMapDeep($breakpoints, 'pc-max-default');
+        position: relative;
+    }
+
+    &Left {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &__input {
+            width: 250px;
+            height: 30px;
+            font-size: $font-size-8;
+            // 右paddingを取っておくことで、重なり部分を作っておく。
+            padding: 0 $margin-px-50 0 $margin-px-10;
+            // paddingで取った、スペース分を回収する。
+            box-sizing: border-box;
+        }
+
+        &__submit {
+            // 親要素からのabsolute。すなわち、headerLeft要素からのabsolute
+            position: absolute;
+            right: 0;
+            // 左上を支点として、繰り返ししないで、表示する。
+            background: url(https://a.mery.jp/cbbf243/images/hd_search_btn.03f6ed6c.png) left top no-repeat;
+            height: 30px;
+            width: 50px;
+            border-radius: 4px;
+            border: 0;
+        }
+    }
+
+    &Center {
+        text-align: center;
+
+        img {
+            height: 30px;
+        }
+    }
+
+    &Right {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        li {
+            display: inline;
+            margin-left: $margin-px-25;
+        }
+
+        a {
+            font-size: $font-size-8;
+            line-height: 30px;
+        }
+    }
+}
+
+.topic {
+    background-color: $color-bg-base-default;
+    border-bottom: 1px solid $color-border-pale-gray;
+
+    &Container {
+        width: getMapDeep($breakpoints, 'pc-max-default');
+        margin: 0 auto;
+        padding: $margin-px-20 0;
+        display: flex;
+    }
+
+    &Contents {
+        margin-left: $margin-px-15;
+
+        &List {
+            display: flex;
+            background: $color-bg-primary-default;
+            margin: 0 $margin-px-20 auto;
+            padding: $margin-px-15 $margin-px-15 $margin-px-15 0;
+        }
+
+        p {
+            width: 300px;
+        }
+
+        &__img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        &__text {
+            // 3点リーダーの対応。
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+
+        &__title {
+            margin-top: $margin-px-10;
+            line-height: 20px;
+        }
+
+        &__desc {
+            margin: $margin-px-5 0;
+            line-height: 16px;
+            font-size: $font-size-8;
+            color: $color-text-old-citadel-codex-grey;
+        }
+
+        &Intro {
+            display: flex;
+            justify-content: space-between;
+
+            &__writer {
+                font-size: $font-size-8;
+
+                a {
+                    color: $color-text-old-citadel-codex-grey;
+                    vertical-align: middle;
+                    line-height: 15px;
+                }
+            }
+
+            &__badge {
+                vertical-align: -2px;
+                width: 13px;
+            }
+
+            &__view {
+                color: $color-text-old-citadel-codex-grey;
+                font-size: $font-size-8;
+            }
+
+            &__viewText {
+                line-height: 15px;
+                font-weight: $font-weight-700;
+                font-size: $font-size-8;
+                margin-right: $margin-px-5;
+            }
+        }
+    }
+
+    &Movie {
+        padding: $margin-px-15;
+        background: $color-bg-primary-default;
+
+        &__img {
+            width: 315px;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        &__title {
+            margin-top: $margin-px-10;
+            line-height: 20px;
+        }
+
+        &__desc {
+            margin: $margin-px-5 0;
+            line-height: 16px;
+            font-size: $font-size-8;
+            color: $color-text-old-citadel-codex-grey;
+        }
+    }
+}
+
+.main {
+    &Container {
+        width: getMapDeep($breakpoints, 'pc-max-default');
+        margin: 0 auto;
+        padding-top: $margin-px-20;
+        display: flex;
+    }
+
+    &Nav {
+        width: 150px;
+        border-right: 1px solid $color-border-pale-gray;
+
+        p {
+            font-size: $font-size-8;
+            padding: $margin-px-15 0 $margin-px-15 $margin-px-5;
+            font-weight: $font-weight-700;
+        }
+
+        li {
+
+            i {
+                margin-right: $margin-px-5;
+                vertical-align: middle;
+            }
+
+            span {
+                vertical-align: middle;
+            }
+        }
+
+        a {
+            display: block;
+            padding: $margin-px-10 $margin-px-20 $margin-px-10 $margin-px-5;
+            font-size: $font-size-8;
+        }
+
+        a:hover {
+            text-decoration: none;
+            background-color: $color-bg-base-default;
+            font-weight: $font-weight-700;
+        }
+
+        &--isActive {
+            background-color: $color-bg-base-default;
+            font-weight: $font-weight-700;
+        }
+    }
+
+    &Contents {
+        flex: 1;
+        padding: 0 $margin-px-20;
+
+        &__head {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: $margin-px-10;
+            border-bottom: 1px solid $color-border-pale-gray;
+            line-height: 10px;
+
+            p {
+                color: $color-text-old-citadel-codex-grey;
+                font-size: $font-size-8;
+                line-height: 16px;
+            }
+        }
+
+        &List {
+
+            &One {
+                display: flex;
+                padding: $margin-px-15 0;
+                border-bottom: 1px dotted $color-border-dot-pale-gray;
+
+                &__img {
+
+                    img {
+                        width: 75px;
+                        height: 75px;
+                        object-fit: cover;
+                    }
+                }
+
+                &__content {
+                    margin-left: $margin-px-5;
+
+                    &Title {
+                        margin-bottom: $margin-px-5;
+                        line-height: 20px;
+                    }
+
+                    &Text {
+                        margin-bottom: $margin-px-5;
+                        color: $color-text-old-citadel-codex-grey;
+                        font-size: $font-size-8;
+                        // 3点リーダーの対応。
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                        overflow: hidden;
+                        line-height: 16px;
+                    }
+                }
+
+                &__intro {
+                    display: flex;
+                }
+
+                &__writer {
+                    font-size: $font-size-8;
+
+                    a {
+                        color: $color-text-old-citadel-codex-grey;
+                        vertical-align: middle;
+                        line-height: 15px;
+                    }
+                }
+
+                &__badge {
+                    vertical-align: -2px;
+                    width: 13px;
+                }
+
+                &__view {
+                    color: $color-text-old-citadel-codex-grey;
+                    font-size: $font-size-8;
+
+                    &Text {
+                        line-height: 15px;
+                        font-weight: $font-weight-700;
+                        font-size: $font-size-8;
+                        margin: 0 $margin-px-5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination {
+    margin: $margin-px-25 0px;
+    display: flex;
+    justify-content: center;
+
+    &--isActive {
+        background-color: $color-bg-base-default;
+    }
+
+    li > a, li > strong {
+        padding: $margin-px-10 $margin-px-15;
+        margin: 0 $margin-px-5;
+        border-radius: 3px;
+        border: 1px solid $color-border-pale-gray;
+    }
+
+    li > span {
+        letter-spacing: 2px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        background-color: $color-bg-base-default;
+    }
+}
+
+.subContents {
+    width: 300px;
+    &Ranking, &NewArticle {
+        &__head {
+            border-left: 3px solid $color-border-accent-pink;
+            padding: $margin-px-5 0 $margin-px-5 $margin-px-10;
+
+            h2 {
+                -webkit-font-smoothing: antialiased;
+                margin-bottom: $margin-px-10;
+            }
+
+            p {
+                color: $color-text-old-citadel-codex-grey;
+                font-size: $font-size-8;
+                margin-bottom: $margin-px-5;
+            }
+        }
+
+        &__list {
+            margin-top: $margin-px-10;
+            border-bottom: 1px dotted $color-border-dot-pale-gray;
+
+            &One {
+                display: flex;
+                padding: $margin-px-10 0;
+                border-top: 1px dotted $color-border-dot-pale-gray;
+
+                &Img {
+                    position: relative;
+
+                    &Thumbnail {
+                        width: 50px;
+                        height: 50px;
+                        object-fit: cover;
+                    }
+
+                    &RankIcon {
+                        position: absolute;
+                        left: -4px;
+                        top: -3px;
+                    }
+                }
+
+                &Content {
+                    margin-left: $margin-px-5;
+
+                    &Title {
+                        line-height: 15px;
+                        margin-bottom: $margin-px-5;
+                        font-size: $font-size-8;
+                        // 3点リーダーの対応。
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                    }
+
+                    &Writer {
+                        font-size: $font-size-8;
+
+                        a {
+                            color: $color-text-old-citadel-codex-grey;
+                            vertical-align: middle;
+                            line-height: 15px;
+                        }
+                    }
+
+                    &Badge {
+                        vertical-align: -2px;
+                        width: 13px;
+                    }
+                }
+            }
+        }
+
+        &__textLink {
+            text-align: right;
+            margin: $margin-px-10 0 $margin-px-20;
+            font-size: $font-size-8;
+
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.appSponsoredLink {
+    background-color: $color-bg-base-default;
+    border-top: 1px solid $color-border-pale-gray;
+    margin-top: $margin-px-25;
+    padding-top: $margin-px-20;
+
+    &Container {
+        width: 830px;
+        margin: 0 auto;
+        display: flex;
+
+        &__content {
+            margin-left: $margin-px-40;
+            padding: $margin-px-20 0;
+
+            &Title {
+                color: $color-text-accent-pink;
+                font-size: $font-size-16;
+                margin-bottom: $margin-px-20;
+            }
+
+            &Text {
+                font-size: $font-size-10;
+                margin-bottom: $margin-px-20;
+                line-height: 20px;
+                letter-spacing: 2px;
+            }
+
+            a {
+                background: url('https://a.mery.jp/42f9172/images/link_btn_iphone2.2431ac84.png');
+                height: 50px;
+                width: 160px;
+                display: inline-block;
+                margin-right: $margin-px-15;
+            }
+        }
+    }
+}
+
+.footer {
+    border-bottom: 1px solid $color-border-pale-gray;
+
+    &Container {
+        width: getMapDeep($breakpoints, 'pc-max-default');
+        margin: $margin-px-20 auto;
+        display: flex;
+
+        &__logo {
+            width: 105px;
+            height: 30px;
+            margin: $margin-px-55 $margin-px-55 0 0;
+        }
+
+        &List {
+            display: flex;
+
+            p {
+                margin-bottom: $margin-px-15;
+                font-size: $font-size-8;
+                color: $color-text-old-citadel-codex-grey;
+                font-weight: $font-weight-700;
+                -webkit-font-smoothing: antialiased;
+            }
+
+            &__category, &__about {
+                margin: $margin-px-10 $margin-px-25 $margin-px-10;
+            }
+
+            ul {
+                column-count: 3;
+            }
+
+            li {
+                padding: $margin-px-5 $margin-px-5 $margin-px-5 0;
+                font-size: $font-size-8;
+            }
+        }
+    }
+
+    &Bottom {
+
+        &Container {
+            width: getMapDeep($breakpoints, 'pc-max-default');
+            margin: $margin-px-20 auto;
+            display: flex;
+            justify-content: space-between;
+
+            &__left {
+
+                span {
+                    display: inline-block;
+                    margin-right: $margin-px-15;
+                    line-height: 30px;
+                }
+
+                &Twitter {
+                    background-color: $color-bg-twitter-default;
+                    color: $color-text-white-default;
+                    border-radius: 3px;
+                    padding: $margin-px-5 $margin-px-10;
+                    font-size: $font-size-8;
+
+                    i {
+                        margin-right: $margin-px-5;
+                    }
+                }
+
+                &Facebook {
+                    background-color: $color-bg-facebook-default;
+                    color: $color-text-white-default;
+                    border-radius: 3px;
+                    padding: $margin-px-5 $margin-px-10;
+                    font-size: $font-size-8;
+
+                    i {
+                        margin-right: $margin-px-5;
+                    }
+                }
+
+                a:hover {
+                    text-decoration: none;
+                }
+            }
+
+            span {
+                color: $color-text-old-citadel-codex-grey;
+                font-size: $font-size-8;
+                line-height: 30px;
+            }
+        }
+    }
+}

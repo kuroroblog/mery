@@ -1,0 +1,764 @@
+@charset "UTF-8";
+/*===============================
+
+    foundation/
+    * reset............`html5doctor.com Reset Stylesheet`をベースとしたリセットCSS
+    * variables........プロジェクト全体を通して使用される変数
+
+================================*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*===============================
+    以下カスタマイズ
+================================*/
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/*===============================
+    余白設定
+================================*/
+/*===============================
+    フォントの大きさ設定
+================================*/
+/*===============================
+    フォントの太さ設定
+================================*/
+/*===============================
+    Color設定
+
+    役割を持つ色と、そうでない色の混在を避けるため、以下のように分類する。
+    ・$color-base-色等-差分: () ……… 不確定要素に使用される、ベースとなる色
+    ・$color-役割-色等-差分: () ………… テキスト、背景色など役割を持つ色
+
+================================*/
+/* リンクカラー ================================*/
+/* border ================================*/
+/* Background ================================*/
+/* Text ================================*/
+/*===============================
+ブレークポイント, デフォルトの横幅の指定
+================================*/
+/*===============================
+    ネストした値を取得
+    $getMapDeep_map      {String} : 配列
+    $getMapDeep_keys...  {String} : 取得したい値のkey名
+================================*/
+/*===============================
+ブレークポイント切替
+$responsive_breakpoint {String} : ブレークポイントが入る（pcまたはsp）
+================================*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  text-decoration: underline;
+  opacity: .8;
+}
+
+.header {
+  border-bottom: 1px solid #eee;
+  padding-top: 20px;
+  height: 50px;
+}
+
+.headerContainer {
+  margin: 0 auto;
+  width: 1010px;
+  position: relative;
+}
+
+.headerLeft {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.headerLeft__input {
+  width: 250px;
+  height: 30px;
+  font-size: 0.8rem;
+  padding: 0 50px 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.headerLeft__submit {
+  position: absolute;
+  right: 0;
+  background: url(https://a.mery.jp/cbbf243/images/hd_search_btn.03f6ed6c.png) left top no-repeat;
+  height: 30px;
+  width: 50px;
+  border-radius: 4px;
+  border: 0;
+}
+
+.headerCenter {
+  text-align: center;
+}
+
+.headerCenter img {
+  height: 30px;
+}
+
+.headerRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.headerRight li {
+  display: inline;
+  margin-left: 25px;
+}
+
+.headerRight a {
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+
+.topic {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #eee;
+}
+
+.topicContainer {
+  width: 1010px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.topicContents {
+  margin-left: 15px;
+}
+
+.topicContentsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #fff;
+  margin: 0 20px auto;
+  padding: 15px 15px 15px 0;
+}
+
+.topicContents p {
+  width: 300px;
+}
+
+.topicContents__img {
+  width: 300px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topicContents__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.topicContents__title {
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.topicContents__desc {
+  margin: 5px 0;
+  line-height: 16px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.topicContentsIntro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.topicContentsIntro__writer {
+  font-size: 0.8rem;
+}
+
+.topicContentsIntro__writer a {
+  color: #999;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.topicContentsIntro__badge {
+  vertical-align: -2px;
+  width: 13px;
+}
+
+.topicContentsIntro__view {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.topicContentsIntro__viewText {
+  line-height: 15px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.topicMovie {
+  padding: 15px;
+  background: #fff;
+}
+
+.topicMovie__img {
+  width: 315px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.topicMovie__title {
+  margin-top: 10px;
+  line-height: 20px;
+}
+
+.topicMovie__desc {
+  margin: 5px 0;
+  line-height: 16px;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.mainContainer {
+  width: 1010px;
+  margin: 0 auto;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainNav {
+  width: 150px;
+  border-right: 1px solid #eee;
+}
+
+.mainNav p {
+  font-size: 0.8rem;
+  padding: 15px 0 15px 5px;
+  font-weight: 700;
+}
+
+.mainNav li i {
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.mainNav li span {
+  vertical-align: middle;
+}
+
+.mainNav a {
+  display: block;
+  padding: 10px 20px 10px 5px;
+  font-size: 0.8rem;
+}
+
+.mainNav a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+  font-weight: 700;
+}
+
+.mainNav--isActive {
+  background-color: #f5f5f5;
+  font-weight: 700;
+}
+
+.mainContents {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px;
+}
+
+.mainContents__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  line-height: 10px;
+}
+
+.mainContents__head p {
+  color: #999;
+  font-size: 0.8rem;
+  line-height: 16px;
+}
+
+.mainContentsListOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 0;
+  border-bottom: 1px dotted #e7e7e7;
+}
+
+.mainContentsListOne__img img {
+  width: 75px;
+  height: 75px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.mainContentsListOne__content {
+  margin-left: 5px;
+}
+
+.mainContentsListOne__contentTitle {
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+
+.mainContentsListOne__contentText {
+  margin-bottom: 5px;
+  color: #999;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  line-height: 16px;
+}
+
+.mainContentsListOne__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mainContentsListOne__writer {
+  font-size: 0.8rem;
+}
+
+.mainContentsListOne__writer a {
+  color: #999;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.mainContentsListOne__badge {
+  vertical-align: -2px;
+  width: 13px;
+}
+
+.mainContentsListOne__view {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.mainContentsListOne__viewText {
+  line-height: 15px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0 5px;
+}
+
+.pagination {
+  margin: 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination--isActive {
+  background-color: #f5f5f5;
+}
+
+.pagination li > a, .pagination li > strong {
+  padding: 10px 15px;
+  margin: 0 5px;
+  border-radius: 3px;
+  border: 1px solid #eee;
+}
+
+.pagination li > span {
+  letter-spacing: 2px;
+}
+
+.pagination a:hover {
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+
+.subContents {
+  width: 300px;
+}
+
+.subContentsRanking__head, .subContentsNewArticle__head {
+  border-left: 3px solid #eb6a7a;
+  padding: 5px 0 5px 10px;
+}
+
+.subContentsRanking__head h2, .subContentsNewArticle__head h2 {
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 10px;
+}
+
+.subContentsRanking__head p, .subContentsNewArticle__head p {
+  color: #999;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.subContentsRanking__list, .subContentsNewArticle__list {
+  margin-top: 10px;
+  border-bottom: 1px dotted #e7e7e7;
+}
+
+.subContentsRanking__listOne, .subContentsNewArticle__listOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+  border-top: 1px dotted #e7e7e7;
+}
+
+.subContentsRanking__listOneImg, .subContentsNewArticle__listOneImg {
+  position: relative;
+}
+
+.subContentsRanking__listOneImgThumbnail, .subContentsNewArticle__listOneImgThumbnail {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.subContentsRanking__listOneImgRankIcon, .subContentsNewArticle__listOneImgRankIcon {
+  position: absolute;
+  left: -4px;
+  top: -3px;
+}
+
+.subContentsRanking__listOneContent, .subContentsNewArticle__listOneContent {
+  margin-left: 5px;
+}
+
+.subContentsRanking__listOneContentTitle, .subContentsNewArticle__listOneContentTitle {
+  line-height: 15px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.subContentsRanking__listOneContentWriter, .subContentsNewArticle__listOneContentWriter {
+  font-size: 0.8rem;
+}
+
+.subContentsRanking__listOneContentWriter a, .subContentsNewArticle__listOneContentWriter a {
+  color: #999;
+  vertical-align: middle;
+  line-height: 15px;
+}
+
+.subContentsRanking__listOneContentBadge, .subContentsNewArticle__listOneContentBadge {
+  vertical-align: -2px;
+  width: 13px;
+}
+
+.subContentsRanking__textLink, .subContentsNewArticle__textLink {
+  text-align: right;
+  margin: 10px 0 20px;
+  font-size: 0.8rem;
+}
+
+.subContentsRanking__textLink a, .subContentsNewArticle__textLink a {
+  text-decoration: underline;
+}
+
+.appSponsoredLink {
+  background-color: #f5f5f5;
+  border-top: 1px solid #eee;
+  margin-top: 25px;
+  padding-top: 20px;
+}
+
+.appSponsoredLinkContainer {
+  width: 830px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.appSponsoredLinkContainer__content {
+  margin-left: 40px;
+  padding: 20px 0;
+}
+
+.appSponsoredLinkContainer__contentTitle {
+  color: #eb6a7a;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.appSponsoredLinkContainer__contentText {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+
+.appSponsoredLinkContainer__content a {
+  background: url("https://a.mery.jp/42f9172/images/link_btn_iphone2.2431ac84.png");
+  height: 50px;
+  width: 160px;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.footer {
+  border-bottom: 1px solid #eee;
+}
+
+.footerContainer {
+  width: 1010px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footerContainer__logo {
+  width: 105px;
+  height: 30px;
+  margin: 55px 55px 0 0;
+}
+
+.footerContainerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footerContainerList p {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footerContainerList__category, .footerContainerList__about {
+  margin: 10px 25px 10px;
+}
+
+.footerContainerList ul {
+  -webkit-column-count: 3;
+          column-count: 3;
+}
+
+.footerContainerList li {
+  padding: 5px 5px 5px 0;
+  font-size: 0.8rem;
+}
+
+.footerBottomContainer {
+  width: 1010px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footerBottomContainer__left span {
+  display: inline-block;
+  margin-right: 15px;
+  line-height: 30px;
+}
+
+.footerBottomContainer__leftTwitter {
+  background-color: #1b95e0;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.footerBottomContainer__leftTwitter i {
+  margin-right: 5px;
+}
+
+.footerBottomContainer__leftFacebook {
+  background-color: #4267b2;
+  color: #fff;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+.footerBottomContainer__leftFacebook i {
+  margin-right: 5px;
+}
+
+.footerBottomContainer__left a:hover {
+  text-decoration: none;
+}
+
+.footerBottomContainer span {
+  color: #999;
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+/*# sourceMappingURL=top.css.map */

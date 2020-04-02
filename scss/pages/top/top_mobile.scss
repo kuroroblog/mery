@@ -1,0 +1,349 @@
+@charset "utf-8";
+
+@import '../common';
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    &Top {
+        background-color: $color-bg-base-default;
+
+        &__container {
+            padding: $margin-px-10;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__left {
+            display: flex;
+
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: $margin-px-10;
+            }
+
+            &Text {
+
+                &--default {
+                    font-size: $font-size-8;
+                    line-height: 18px;
+                }
+
+                &--grey {
+                    font-size: $font-size-6;
+                    color: $color-link-krylon-classic-gray;
+                    line-height: 12px;
+                }
+            }
+        }
+
+        &__right {
+            font-size: $font-size-8;
+            // 仕方がない。
+            padding: 8px;
+            background-color: $color-bg-accent-pink;
+            border: 1px solid $color-border-accent-pink;
+            border-radius: 2px;
+            color: $color-text-white-default;
+        }
+    }
+
+    border-bottom: 1px solid $color-border-dot-pale-gray;
+
+    &__container {
+        display: flex;
+        margin: $margin-px-10;
+        align-items: center;
+        justify-content: space-between;
+
+        img {
+            width: 70px;
+            height: 20px;
+        }
+
+        i {
+            color: $color-link-krylon-classic-gray;
+        }
+    }
+}
+
+.topic {
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 210px;
+        object-fit: cover;
+    }
+
+    h2 {
+        margin: 0 $margin-px-10;
+        position: absolute;
+        top: 150px;
+        left: 0;
+        line-height: 22px;
+        font-size: $font-size-10;
+        color: $color-text-white-default;
+
+        // 3点リーダーの対応。
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+}
+
+.main, .accessRanking {
+    &__category {
+        display: flex;
+
+        a {
+            width: 50%;
+            display: block;
+
+            h2 {
+                text-align: center;
+                padding: $margin-px-15;
+                font-size: $font-size-8;
+            }
+        }
+
+        &--normal {
+            border-bottom: 1px solid $color-border-dot-pale-gray;
+            color: $color-link-krylon-classic-gray;
+            font-weight: $font-weight-400;
+        }
+
+        &--isActive {
+            border-bottom: solid 2px $color-border-accent-pink;
+            color: $color-text-accent-pink;
+        }
+    }
+
+    &__contents {
+
+        li {
+            border-bottom: 1px solid $color-border-dot-pale-gray;
+
+            > a {
+                display: flex;
+                padding: $margin-px-10;
+            }
+        }
+
+        &--left {
+
+            img {
+                height: 70px;
+                width: 70px;
+                margin-right: $margin-px-10;
+                border-radius: 2px;
+                background-size: cover;
+            }
+        }
+
+        &--right {
+
+            &Pr {
+                width: 15px;
+            }
+
+            p {
+                margin: $margin-px-5 0;
+                font-size: $font-size-8;
+                color: $color-text-black-default;
+                line-height: 20px;
+
+                // 3点リーダーの対応。
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+            }
+
+            &Intro {
+                display: flex;
+                justify-content: space-between;
+                font-size: $font-size-6;
+                line-height: 13px;
+                color: $color-text-old-citadel-codex-grey;
+
+                li {
+                    border-bottom: none;
+                }
+
+                &__viewText {
+                    padding-right: $margin-px-5;
+                    font-size: $font-size-8;
+                }
+
+                &__badge {
+                    width: 13px;
+                }
+            }
+        }
+    }
+
+    &__paginate {
+        background-color: $color-bg-accent-grey;
+        display: flex;
+        height: 60px;
+
+        li {
+            text-align: center;
+        }
+
+        span {
+            line-height: 60px;
+            color: $color-text-old-citadel-codex-grey;
+        }
+
+        &--center {
+            width: 50%;
+
+            span {
+                font-size: $font-size-8;
+            }
+        }
+
+        &--left, &--right {
+            width: 25%;
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    &__title {
+        font-size: $font-size-10;
+        padding: $margin-px-20 $margin-px-15 $margin-px-20 $margin-px-10;
+        border-bottom: 1px solid $color-border-dot-pale-gray;
+    }
+}
+
+.sns {
+    background-color: $color-bg-base-default;
+    padding: $margin-px-30 0;
+
+    &Container {
+        background-color: $color-bg-primary-default;
+        padding-bottom: $margin-px-25;
+
+        img {
+            width: 100%;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: $margin-px-5;
+
+            a {
+                display: block;
+            }
+        }
+
+        &__tool {
+            font-size: $font-size-16;
+
+            &--facebook {
+                background-color: $color-bg-facebook-default;
+                // 仕方ない
+                padding: $margin-px-10 16px;
+                color: $color-text-white-default;
+                border-radius: 22px;
+            }
+
+            &--twitter {
+                background-color: $color-bg-twitter-default;
+                padding: $margin-px-10 $margin-px-10;
+                color: $color-text-white-default;
+                border-radius: 22px;
+            }
+
+            &--line {
+                background-color: $color-bg-line-default;
+                // 仕方ない
+                padding: $margin-px-10 12px;
+                color: $color-text-white-default;
+                border-radius: 22px;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-bg-base-default;
+    padding-bottom: $margin-px-80;
+
+    &AppDownload {
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &Container {
+        padding: $margin-px-30 $margin-px-20 0;
+
+        &__top {
+            background-color: $color-bg-primary-default;
+            text-align: center;
+            display: block;
+            padding: $margin-px-10 0;
+            color: $color-link-krylon-classic-gray;
+            font-size: $font-size-8;
+            border: 1px solid $color-border-dot-pale-gray;
+            border-radius: 4px;
+            margin-bottom: $margin-px-30;
+
+            .material-icons {
+                display: inline-flex;
+                vertical-align: middle;
+                margin-right: $margin-px-5;
+            }
+        }
+
+        ul {
+            text-align: center;
+            margin-bottom: $margin-px-30;
+            font-size: 0;
+
+            > li {
+                font-size: $font-size-8;
+                display: inline-block;
+                border-right: 1px solid #ddd;
+                margin: $margin-px-5 0;
+
+                > a {
+                    color: $color-text-old-citadel-codex-grey;
+                    padding: $margin-px-5;
+                }
+            }
+        }
+
+        &__thumb-mery {
+            text-align: center;
+
+            img {
+                width: 100px;
+                margin: 0 auto;
+                object-fit: cover;
+            }
+        }
+
+        p {
+            margin-top: $margin-px-30;
+            text-align: center;
+            color: $color-link-krylon-classic-gray;
+            font-size: $font-size-6;
+        }
+    }
+}
